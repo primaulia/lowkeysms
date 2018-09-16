@@ -85,7 +85,7 @@ exports.sendMessages = function(request, response) {
   const message = request.body.message;
   const imageUrl = request.body.imageUrl;
   console.log('called')
-  messageSender.broadcastToRSVP({}, message, imageUrl).then(() => {
+  messageSender.broadcastToRSVP(message).then(() => {
     request.flash('successes', 'Messages on their way!');
     response.redirect('/');
   });
