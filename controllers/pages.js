@@ -6,3 +6,12 @@ exports.showForm = function(request, response) {
         successes: request.flash('successes'),
     });
 };
+
+// Render a form to send an MMS message
+exports.showWetWeather = function (request, response) {
+  // Render form, with any success or error flash messages
+  response.render('wet', {
+    errors: request.flash('errors'),
+    successes: request.flash('successes'),
+  });
+};
