@@ -4,20 +4,19 @@ block content
   h1 Wet Weather Plan :(
 
   p.
-    Use this form to send SMS notifications to any subscribers.
+    Use this form to send SMS in the case of wet weather plan.
 
-  form(action='/message/send', method='POST')
+  form(action='/message/wet', method='POST')
 
     // The text of the message to send
     .form-group
-      label(for='message') Enter a message
+      label(for='message') Enter a message for Special Guest
       input.form-control(type='text', name='message',
         placeholder='Hi there, gorgeous ;)')
 
-    // An optional image URL
     .form-group
-      label(for='imageUrl') (Optional) Image URL to send in an MMS
-      input.form-control(type='text', name='imageUrl',
-        placeholder='http://fake.twilio.com/some_image.png')
+      label(for='message') Enter a message for the rest
+      input.form-control(type='text', name='message',
+        placeholder='Hi there, gorgeous ;)')
 
     button.btn.btn-primary(type='submit') Send Yourself a Message!
